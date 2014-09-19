@@ -1,0 +1,49 @@
+{
+  "name": "continua-hub",
+  "version": "0.1.0",
+  "description": "HTTP server/site for hosting and management of continua packages and bootstrappers",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/LeanKit-Labs/continua-hub"
+  },
+  "keywords": [
+    "continua",
+    "hub",
+    "cd",
+    "package"
+  ],
+  "author": "Alex Robson",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/LeanKit-Labs/continua-hub/issues"
+  },
+  "homepage": "https://github.com/LeanKit-Labs/continua-hub",
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-mocha": "^1.0.0",
+    "gulp-mocha-phantomjs": "^0.5.0",
+    "gulp-path-prefix": "0.0.3",
+    "gulp-webpack": "^0.3.0",
+    "processhost": "^0.1.13",
+    "should": "^4.0.4"
+  },
+  "dependencies": {
+    "autohost": "~0.2.0-19",
+    "autohost-nedb-auth": "0.1.0-3",
+    "commander": "^2.3.0",
+    "configya": "^0.1.0",
+    "continua-package-resource": "^0.1.0",
+    "daedalus": "^0.3.2",
+    "debug": "^2.0.0",
+    "inquirer": "^0.7.2",
+    "lodash": "^2.4.1",
+    "machina": "^0.4.0-1",
+    "node-uuid": "^1.4.1",
+    "when": "^3.4.5"
+  }
+}
