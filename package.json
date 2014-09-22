@@ -1,7 +1,7 @@
 {
-  "name": "continua-hub",
+  "name": "nonstop-hub",
   "version": "0.1.0",
-  "description": "HTTP server/site for hosting and management of continua packages and bootstrappers",
+  "description": "HTTP server/site for hosting and management of nonstop packages and bootstrappers",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
@@ -9,10 +9,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/LeanKit-Labs/continua-hub"
+    "url": "git://github.com/LeanKit-Labs/nonstop-hub"
   },
   "keywords": [
-    "continua",
+    "nonstop",
     "hub",
     "cd",
     "package"
@@ -20,9 +20,9 @@
   "author": "Alex Robson",
   "license": "MIT License",
   "bugs": {
-    "url": "https://github.com/LeanKit-Labs/continua-hub/issues"
+    "url": "https://github.com/LeanKit-Labs/nonstop-hub/issues"
   },
-  "homepage": "https://github.com/LeanKit-Labs/continua-hub",
+  "homepage": "https://github.com/LeanKit-Labs/nonstop-hub",
   "devDependencies": {
     "gulp": "^3.8.7",
     "gulp-mocha": "^1.0.0",
@@ -37,7 +37,7 @@
     "autohost-nedb-auth": "0.1.0-3",
     "commander": "^2.3.0",
     "configya": "^0.1.0",
-    "continua-package-resource": "^0.1.0",
+    "nonstop-package-resource": "^0.1.0",
     "daedalus": "^0.3.2",
     "debug": "^2.0.0",
     "inquirer": "^0.7.2",
