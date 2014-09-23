@@ -1,7 +1,9 @@
-var gulp = require( 'gulp' ),
-	mocha = require( 'gulp-mocha' ),
-	processHost = require( 'processHost' )(),
-	mochaPhantom = require( 'gulp-mocha-phantomjs' );
+var gulp = require( 'gulp' );
+var mocha = require( 'gulp-mocha' );
+var processHost = require( 'processHost' )();
+var mochaPhantom = require( 'gulp-mocha-phantomjs' );
+var webpack = require( 'gulp-webpack' );
+var webpackCfg = require( './webpack.config.js' );
 
 gulp.task( 'test', function() {
 	return gulp.src( [ './spec/websocket/*.spec.js', './spec/socketio/*.spec.js', './spec/*.spec.js' ], { read: false } )
@@ -15,20 +17,29 @@ gulp.task( 'continuous-test', function() {
 		.pipe( mocha( { reporter: 'spec' } ) );
 } );
 
+gulp.task( 'build-client', function() {
+	return webpack( webpackCfg );
+} );
+
 gulp.task( 'continuous-client', function() {
-	if( !processHost.http ) {
+	if ( !processHost.http ) {
 		processHost.startProcess( 'http', {
 			command: 'node',
-			args: [ './spec/dashboard/host.js' ]
+			args: [ './src/index.js', '-s' ]
 		} );
 	}
 
-	var stream = mochaPhantom();
-	setTimeout( function() {
-		stream.write( { path: 'http://localhost:4488/spec/dash.html' } );
-		stream.end();
-	}, 200 );
-	return stream;
+
+	// I'm not entirely clear on when the
+	// client will involve the mocha-phantom-browser
+	// test runner output. But per discussion with Alex,
+	// leaving this in for now for us to discuss.
+	// var stream = mochaPhantom();
+	// setTimeout( function() {
+	// 	stream.write( { path: 'http://localhost:4488/spec/dash.html' } );
+	// 	stream.end();
+	// }, 200 );
+	// return stream;
 } );
 
 gulp.task( 'watch', function() {
@@ -36,12 +47,9 @@ gulp.task( 'watch', function() {
 } );
 
 gulp.task( 'watch-client', function() {
-	gulp.watch( [ './src/**', './spec/**' ], [ 'continuous-client' ] );
+	gulp.watch( [ './src/**', './spec/**', './public/**/*' ], [ 'build-client', 'continuous-client' ] );
 } );
 
-gulp.task( 'client', [ 'continuous-client', 'watch-client' ], function() {
+gulp.task( 'client', [ 'build-client', 'continuous-client', 'watch-client' ], function() {} );
 
-} );
-
-gulp.task( 'default', [ 'continuous-test', 'watch' ], function() {
-} );
+gulp.task( 'default', [ 'continuous-test', 'watch' ], function() {} );

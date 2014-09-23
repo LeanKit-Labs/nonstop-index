@@ -1,5 +1,5 @@
 {
-  "name": "continua-hub",
+  "name": "nonstop-hub",
   "version": "0.1.0",
   "description": "HTTP server/site for hosting and management of continua packages and bootstrappers",
   "main": "src/index.js",

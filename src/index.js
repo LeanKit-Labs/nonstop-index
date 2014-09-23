@@ -1,5 +1,5 @@
-var main = require( './main.js' ),
-	prompt = require( './prompt.js' ),
-	server = require( './server.js' );
+var main = require( './main.js' );
+var prompt = require( './prompt.js' ); //jshint ignore:line
+var server = require( './server.js' );
 
 main( prompt, server );
