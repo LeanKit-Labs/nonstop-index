@@ -1,6 +1,6 @@
-var _ = require( 'lodash' ),
-	commander = require( 'commander' ),
-	inquire = require( 'inquirer' );
+var _ = require( 'lodash' );
+var commander = require( 'commander' );
+var inquire = require( 'inquirer' );
 
 var initialChoices = {
 		adminPassword: 'Change admin password',

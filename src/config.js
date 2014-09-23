@@ -4,7 +4,7 @@ module.exports = require( 'configya' )
 	( 
 		path.join( process.cwd(), './config.json' ),
 		{
-			continua: {
+			nonstop: {
 				host: {
 					port: 4444
 				}
