@@ -30,7 +30,8 @@ module.exports = function( prompt, server ) {
 				function() { return auth.changeUserRoles( 'admin', [ 'admin' ], 'add' ); },
 				function() { return auth.createRole( 'client' ); },
 				function() { return auth.changeActionRoles( 'package.list', [ 'client' ], 'add' ); },
-				function() { return auth.changeActionRoles( 'package.project', [ 'client' ], 'add' ); },
+				function() { return auth.changeActionRoles( 'package.projects', [ 'client' ], 'add' ); },
+				function() { return auth.changeActionRoles( 'package.terms', [ 'client' ], 'add' ); },
 				function() { return auth.createRole( 'agent' ); },
 				function() { return auth.changeActionRoles( 'package.upload', [ 'agent' ], 'add' ); },			
 				function() {

@@ -1,6 +1,6 @@
 {
   "name": "nonstop-hub",
-  "version": "0.1.0-1",
+  "version": "0.1.0-2",
   "description": "HTTP server/site for hosting and management of nonstop packages and bootstrappers",
   "main": "src/index.js",
   "scripts": {
@@ -33,17 +33,18 @@
     "should": "^4.0.4"
   },
   "dependencies": {
-    "autohost": "~0.2.0-19",
-    "autohost-nedb-auth": "0.1.0-3",
+    "autohost": "~0.3.0",
+    "autohost-nedb-auth": "~0.1.0",
     "commander": "^2.3.0",
-    "configya": "^0.1.0",
-    "nonstop-package-resource": "^0.1.0",
-    "daedalus": "^0.3.2",
+    "configya": "~0.1.0",
+    "daedalus": "~0.3.2",
     "debug": "^2.0.0",
+    "hyped": "~0.1.0",
     "inquirer": "^0.7.2",
     "lodash": "^2.4.1",
     "machina": "^0.4.0-1",
     "node-uuid": "^1.4.1",
+    "nonstop-package-resource": "~0.1.0",
     "when": "^3.4.5"
   }
 }
