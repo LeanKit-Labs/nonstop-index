@@ -3,3 +3,4 @@ tmp/
 node_modules/
 spec/
 packages/
+public/nonstop/package/
