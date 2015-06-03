@@ -24,27 +24,27 @@
   },
   "homepage": "https://github.com/LeanKit-Labs/nonstop-hub",
   "devDependencies": {
-    "gulp": "^3.8.7",
-    "gulp-mocha": "^1.0.0",
-    "gulp-mocha-phantomjs": "^0.5.0",
+    "gulp": "^3.9.0",
+    "gulp-mocha": "^2.1.0",
+    "gulp-mocha-phantomjs": "^0.6.1",
     "gulp-path-prefix": "0.0.3",
-    "gulp-webpack": "^0.3.0",
-    "processhost": "^0.1.13",
-    "should": "^4.0.4"
+    "gulp-webpack": "^1.4.0",
+    "processhost": "^0.2.2",
+    "should": "^6.0.3"
   },
   "dependencies": {
-    "autohost": "~0.3.0",
-    "autohost-nedb-auth": "~0.1.0",
-    "commander": "^2.3.0",
-    "configya": "~0.1.0",
-    "daedalus": "~0.3.2",
-    "debug": "^2.0.0",
-    "hyped": "~0.1.0",
-    "inquirer": "^0.7.2",
-    "lodash": "^2.4.1",
-    "machina": "^0.4.0-1",
-    "node-uuid": "^1.4.1",
+    "autohost": "~0.4.2",
+    "autohost-nedb-auth": "~0.2.3",
+    "commander": "^2.8.1",
+    "configya": "~0.2.1",
+    "daedalus": "~0.5.0",
+    "debug": "^2.2.0",
+    "hyped": "~0.2.1",
+    "inquirer": "^0.8.5",
+    "lodash": "3.x",
+    "machina": "1.x",
+    "node-uuid": "^1.4.3",
     "nonstop-package-resource": "~0.1.0",
-    "when": "^3.4.5"
+    "when": "3.x"
   }
 }
