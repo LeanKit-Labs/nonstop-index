@@ -9,15 +9,15 @@ function start() {
 	try {
 		host = hyped.createHost( autohost, {
 			port: config.nonstop.host.port,
-			socketIO: true,
-			origin: 'nonstop',
 			modules: [
 				'nonstop-package-resource',
 				'nonstop-registry-resource'
 			],
 			authProvider: authProvider
+		}, function() {
+			host.start();
 		} );
-		host.start();
+
 		daedalus.register( config.nonstop.host.port, [ '0.1.0', 'nonstop', 'hub' ] );
 	} catch( err ) {
 		console.log( 'Starting server failed with', err.stack );

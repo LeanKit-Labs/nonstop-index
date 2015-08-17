@@ -1,6 +1,6 @@
 {
   "name": "nonstop-index",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "HTTP server/site for hosting and management of nonstop packages and bootstrappers",
   "main": "src/index.js",
   "scripts": {
@@ -47,7 +47,7 @@
     "configya": "~0.2.0",
     "daedalus": "~0.3.2",
     "debug": "^2.0.0",
-    "hyped": "~0.2.3",
+    "hyped": "~0.2.4",
     "inquirer": "^0.7.2",
     "lodash": "^2.4.1",
     "machina": "^0.4.0-1",
