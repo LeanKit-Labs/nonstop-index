@@ -11,7 +11,10 @@ function start() {
 			port: config.nonstop.host.port,
 			socketIO: true,
 			origin: 'nonstop',
-			modules: [ 'nonstop-package-resource' ],
+			modules: [
+				'nonstop-package-resource',
+				'nonstop-registry-resource'
+			],
 			authProvider: authProvider
 		} );
 		host.start();
