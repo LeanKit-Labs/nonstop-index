@@ -1,7 +1,11 @@
 ## 0.1.*
 
+### 0.1.6
+Add missing request dependency to package.json.
+
 ### 0.1.5
-Update dependencies.
+ * Update dependencies.
+ * Add test coverage for web hooks.
 
 ### 0.1.4
 Add webhook support.
