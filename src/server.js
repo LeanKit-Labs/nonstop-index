@@ -1,26 +1,34 @@
-var autohost = require( 'autohost' );
+var autohost = require( "autohost" );
 var host;
-var hyped = require( 'hyped' )();
-var authProvider = require( 'autohost-nedb-auth' )( {} );
-var config = require( './config.js' );
-var daedalus = require( 'daedalus' )( 'nonstop-host', config.consul );
+var hyped = require( "hyped" )();
+var authProvider = require( "autohost-nedb-auth" )( {} );
+var fount = require( "fount" );
+var config = require( "./config.js" );
+var daedalus = require( "daedalus" )( "nonstop-host", config.consul );
+var hooks = require( "./hooks" );
+var postal = require( "postal" );
+var channel = postal.channel( "eventChannel" );
+require( "./publisher" )( hooks, channel );
 
 function start() {
 	try {
+		fount.register( "hooks", hooks );
+		fount.register( "events", channel );
 		host = hyped.createHost( autohost, {
 			port: config.nonstop.host.port,
 			modules: [
-				'nonstop-package-resource',
-				'nonstop-registry-resource'
+				"nonstop-package-resource",
+				"nonstop-registry-resource"
 			],
+			fount: fount,
 			authProvider: authProvider
 		}, function() {
 			host.start();
 		} );
 
-		daedalus.register( config.nonstop.host.port, [ '0.1.0', 'nonstop', 'hub' ] );
-	} catch( err ) {
-		console.log( 'Starting server failed with', err.stack );
+		daedalus.register( config.nonstop.host.port, [ "0.1.0", "nonstop", "hub" ] );
+	} catch ( err ) {
+		console.log( "Starting server failed with", err.stack );
 	}
 }
 

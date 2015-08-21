@@ -1,8 +1,8 @@
-var path = require( 'path' );
+var path = require( "path" );
 
-module.exports = require( 'configya' )
-	( 
-		path.join( process.cwd(), './config.json' ),
+module.exports = require( "configya" )
+	(
+		path.join( process.cwd(), "./config.json" ),
 		{
 			nonstop: {
 				host: {
@@ -10,7 +10,7 @@ module.exports = require( 'configya' )
 				}
 			},
 			consul: {
-				dc: 'dc1'
+				dc: "dc1"
 			}
-		} 
+		}
 	);

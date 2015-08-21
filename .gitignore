@@ -6,3 +6,4 @@ data
 tmp
 packages/
 public/nonstop/package/
+coverage/
