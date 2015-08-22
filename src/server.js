@@ -8,6 +8,7 @@ var daedalus = require( "daedalus" )( "nonstop-host", config.consul );
 var hooks = require( "./hooks" );
 var postal = require( "postal" );
 var channel = postal.channel( "eventChannel" );
+var path = require( "path" );
 require( "./publisher" )( hooks, channel );
 
 function start() {
@@ -21,6 +22,7 @@ function start() {
 				"nonstop-registry-resource"
 			],
 			fount: fount,
+			resources: path.resolve( __dirname, "../resource" ),
 			authProvider: authProvider
 		}, function() {
 			host.start();

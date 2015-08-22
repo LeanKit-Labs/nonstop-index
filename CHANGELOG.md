@@ -1,5 +1,8 @@
 ## 0.1.*
 
+### 0.1.7
+Fix resource path for running globally.
+
 ### 0.1.6
 Add missing request dependency to package.json.
 

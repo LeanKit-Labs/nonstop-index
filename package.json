@@ -1,6 +1,6 @@
 {
   "name": "nonstop-index",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "HTTP server/site for hosting and management of nonstop packages and bootstrappers",
   "main": "src/index.js",
   "scripts": {
