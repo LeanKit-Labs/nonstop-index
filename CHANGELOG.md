@@ -1,5 +1,8 @@
 ## 0.1.*
 
+### 0.1.9
+Bug fix - hook self action should return a 404 if hook doesn't exist.
+
 ### 0.1.8
 Allow web hooks to specify a property to put the payload under.
 

@@ -15,7 +15,10 @@ function check( id ) {
 }
 
 function getById( id ) {
-	return hooks.fetch( { id: id } );
+	return hooks.fetch( { id: id } )
+		.then( function( results ) {
+			return results.length ? results[ 0 ] : undefined;
+		} );
 }
 
 function getList() {
