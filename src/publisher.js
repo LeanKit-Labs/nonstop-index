@@ -7,6 +7,11 @@ function publishEvent( ev, hook ) {
 	var url = hook.url;
 	var headers = hook.headers;
 	var method = hook.method || "POST";
+	if( hook.property ) {
+		var tmp = {};
+		tmp[ hook.property ] = json;
+		json = tmp;
+	}
 	_.merge( headers, { "content-type": "application/json" } );
 	var requestOptions = {
 		url: url,
