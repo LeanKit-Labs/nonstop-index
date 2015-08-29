@@ -1,6 +1,6 @@
 {
   "name": "nonstop-index",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "HTTP server/site for hosting and management of nonstop packages and bootstrappers",
   "main": "src/index.js",
   "scripts": {
@@ -53,6 +53,7 @@
   "dependencies": {
     "autohost": "~0.4.5",
     "autohost-nedb-auth": "~0.2.0",
+    "autohost-webhook": "~0.1.1",
     "commander": "^2.3.0",
     "configya": "~0.2.0",
     "daedalus": "~0.3.2",

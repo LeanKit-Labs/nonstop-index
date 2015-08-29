@@ -5,21 +5,21 @@ var authProvider = require( "autohost-nedb-auth" )( {} );
 var fount = require( "fount" );
 var config = require( "./config.js" );
 var daedalus = require( "daedalus" )( "nonstop-host", config.consul );
-var hooks = require( "./hooks" );
 var postal = require( "postal" );
 var channel = postal.channel( "eventChannel" );
 var path = require( "path" );
-require( "./publisher" )( hooks, channel );
+require( "autohost-webhook" );
 
 function start() {
 	try {
-		fount.register( "hooks", hooks );
+		fount.register( "webHookEvents", channel );
 		fount.register( "events", channel );
 		host = hyped.createHost( autohost, {
 			port: config.nonstop.host.port,
 			modules: [
 				"nonstop-package-resource",
-				"nonstop-registry-resource"
+				"nonstop-registry-resource",
+				"autohost-webhook"
 			],
 			fount: fount,
 			resources: path.resolve( __dirname, "../resource" ),

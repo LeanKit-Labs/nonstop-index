@@ -1,5 +1,8 @@
 ## 0.1.*
 
+### 0.1.10
+Improvement - extract web hook behavior into shared module.
+
 ### 0.1.9
 Bug fix - hook self action should return a 404 if hook doesn't exist.
 
