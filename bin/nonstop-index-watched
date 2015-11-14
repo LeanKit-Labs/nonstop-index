@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+var format = require( "util" ).format;
+var heapdump = require( "heapdump" );
 
 var memwatch = require( "memwatch-next" );
 var hd = new memwatch.HeapDiff();
@@ -6,11 +8,19 @@ memwatch.on("leak", function(info) {
 	console.log( "Leaky AF", info );
 	var diff = hd.end();
 	hd = new memwatch.HeapDiff();
-	console.log( "Your diff:", diff );
+	console.log( format( "Your diff: %j", diff ) );
 } );
 
 memwatch.on( "stats", function( info ) {
 	console.log( "DAT GC!", info );
+	var diff = hd.end();
+	hd = new memwatch.HeapDiff();
+	console.log( format( "Your diff: %j", diff ) );
 } );
 
-require( '../src/index.js' );
+setInterval( function() {
+	console.log( "SNIZZAPSHIZZOT" );
+	heapdump.writeSnapshot( "./" + Date.now() + ".heapsnapshot") ;
+}, 30000 );
+
+require( "../src/index.js" );

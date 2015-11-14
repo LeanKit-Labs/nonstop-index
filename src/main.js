@@ -22,6 +22,7 @@ module.exports = function( prompt, server ) {
 		},
 
 		setupAdmin: function() {
+			// oh gosh, this is gross, what's wrong with me ...
 			sequence( [
 				function() {
 					return auth.createUser( "admin", "admin" );
@@ -43,6 +44,36 @@ module.exports = function( prompt, server ) {
 				},
 				function() {
 					return auth.changeActionRoles( "package.terms", [ "client" ], "add" );
+				},
+				function() {
+					return auth.changeActionRoles( "host.self", [ "client" ], "add" );
+				},
+				function() {
+					return auth.changeActionRoles( "host.update", [ "client" ], "add" );
+				},
+				function() {
+					return auth.changeActionRoles( "host.notify", [ "client" ], "add" );
+				},
+				function() {
+					return auth.changeActionRoles( "host.list", [ "client" ], "add" );
+				},
+				function() {
+					return auth.changeActionRoles( "hook.self", [ "client" ], "add" );
+				},
+				function() {
+					return auth.changeActionRoles( "hook.remove", [ "client" ], "add" );
+				},
+				function() {
+					return auth.changeActionRoles( "hook.add", [ "client" ], "add" );
+				},
+				function() {
+					return auth.changeActionRoles( "hook.list", [ "client" ], "add" );
+				},
+				function() {
+					return auth.changeActionRoles( "hook.replace", [ "client" ], "add" );
+				},
+				function() {
+					return auth.changeActionRoles( "hook.update", [ "client" ], "add" );
 				},
 				function() {
 					return auth.createRole( "agent" );

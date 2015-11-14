@@ -1,5 +1,9 @@
 ## 0.1.*
 
+### 0.1.11
+ * Adding client role to hook and registry actions.
+ * Remove session (in memory session provider caused serious memory leak)
+
 ### 0.1.10
 Improvement - extract web hook behavior into shared module.
 

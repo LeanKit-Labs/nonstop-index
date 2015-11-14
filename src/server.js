@@ -22,13 +22,14 @@ function start() {
 				"autohost-webhook"
 			],
 			fount: fount,
+			noSession: true,
 			resources: path.resolve( __dirname, "../resource" ),
 			authProvider: authProvider
 		}, function() {
 			host.start();
 		} );
 
-		daedalus.register( config.nonstop.host.port, [ "0.1.0", "nonstop", "hub" ] );
+		daedalus.register( config.nonstop.host.port, [ "0.1.0", "nonstop", "index" ] );
 	} catch ( err ) {
 		console.log( "Starting server failed with", err.stack );
 	}
