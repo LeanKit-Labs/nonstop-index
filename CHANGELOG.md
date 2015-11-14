@@ -1,5 +1,8 @@
 ## 0.1.*
 
+### 0.1.12
+Bug fix - host.register wasn't allowing clients to make the call.
+
 ### 0.1.11
  * Adding client role to hook and registry actions.
  * Remove session (in memory session provider caused serious memory leak)

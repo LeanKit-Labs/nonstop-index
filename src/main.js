@@ -49,6 +49,9 @@ module.exports = function( prompt, server ) {
 					return auth.changeActionRoles( "host.self", [ "client" ], "add" );
 				},
 				function() {
+					return auth.changeActionRoles( "host.register", [ "client" ], "add" );
+				},
+				function() {
 					return auth.changeActionRoles( "host.update", [ "client" ], "add" );
 				},
 				function() {
