@@ -1,5 +1,8 @@
 ## 0.1.*
 
+### 0.1.13
+Update registry resource version
+
 ### 0.1.12
 Bug fix - host.register wasn't allowing clients to make the call.
 
