@@ -1,5 +1,8 @@
 ## 0.1.*
 
+### 0.1.14
+Update autohost dependency minimum version
+
 ### 0.1.13
 Update registry resource version
 
