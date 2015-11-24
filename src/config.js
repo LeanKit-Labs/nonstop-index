@@ -21,18 +21,6 @@ module.exports = require( "configya" )
 			port: 4444,
 			urlPrefix: "",
 			apiPrefix: ""
-		},
-		storage: {
-			s3: {
-				id: "",
-				key: "",
-				bucket: "nonstop-packages-test"
-			},
-			rethink: {
-				host: "localhost",
-				port: 28015,
-				database: "nonstop"
-			}
 		}
 	}
 );
