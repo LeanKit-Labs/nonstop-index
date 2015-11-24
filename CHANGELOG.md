@@ -1,3 +1,11 @@
+## 0.2.*
+
+### 0.2.0
+ * Improved configuration approach
+ * Updated to latest package and registry resources
+ * Support for alternate storage mechanisms
+ * Now with actual README action!
+
 ## 0.1.*
 
 ### 0.1.14
