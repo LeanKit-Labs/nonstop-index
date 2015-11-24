@@ -47,18 +47,6 @@ The process will look in the current working directory (where `nsindex` was call
 		apiPrefix: "",
 		urlPrefix: "",
 		port: 4444
-	},
-	storage: {
-		s3: {
-			id: "",
-			key: "",
-			bucket: "nonstop-packages"
-		},
-		rethink: {
-			host: "localhost",
-			port: 28015,
-			database: "nonstop"
-		}
 	}
 }
 ```
