@@ -1,5 +1,8 @@
 ## 0.2.*
 
+### 0.2.1
+Removed default configuration for alternate storage
+
 ### 0.2.0
  * Improved configuration approach
  * Updated to latest package and registry resources
