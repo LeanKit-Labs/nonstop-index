@@ -6,3 +6,4 @@ packages/
 coverage/
 data/
 public/nonstop/package/
+config.json
