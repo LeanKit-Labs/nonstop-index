@@ -46,6 +46,15 @@ module.exports = function( prompt, server ) {
 					return auth.changeActionRoles( "package.terms", [ "client" ], "add" );
 				},
 				function() {
+					return auth.changeActionRoles( "package.downloadFile", [ "client" ], "add" );
+				},
+				function() {
+					return auth.changeActionRoles( "package.downloadPackage", [ "client" ], "add" );
+				},
+				function() {
+					return auth.changeActionRoles( "package.promote", [ "client" ], "add" );
+				},
+				function() {
 					return auth.changeActionRoles( "host.self", [ "client" ], "add" );
 				},
 				function() {
@@ -59,6 +68,21 @@ module.exports = function( prompt, server ) {
 				},
 				function() {
 					return auth.changeActionRoles( "host.list", [ "client" ], "add" );
+				},
+				function() {
+					return auth.changeActionRoles( "host.status", [ "client" ], "add" );
+				},
+				function() {
+					return auth.changeActionRoles( "host.getEnvironment", [ "client" ], "add" );
+				},
+				function() {
+					return auth.changeActionRoles( "host.command", [ "client" ], "add" );
+				},
+				function() {
+					return auth.changeActionRoles( "host.configure", [ "client" ], "add" );
+				},
+				function() {
+					return auth.changeActionRoles( "host.changeEnvironment", [ "client" ], "add" );
 				},
 				function() {
 					return auth.changeActionRoles( "hook.self", [ "client" ], "add" );
