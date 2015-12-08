@@ -20,7 +20,15 @@ module.exports = require( "configya" )
 			noSession: true,
 			port: 4444,
 			urlPrefix: "",
-			apiPrefix: ""
+			apiPrefix: "",
+			logging: {
+				adapters: {
+					stdOut: {
+						level: 3,
+						topic: "#"
+					}
+				}
+			}
 		}
 	}
 );

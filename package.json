@@ -1,6 +1,6 @@
 {
   "name": "nonstop-index",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "HTTP server/site for hosting and management of nonstop packages and bootstrappers",
   "main": "src/index.js",
   "scripts": {
@@ -70,8 +70,8 @@
     "machina": "^0.4.0-1",
     "nedb": "^1.1.3",
     "node-uuid": "^1.4.1",
-    "nonstop-pack": "~0.2.0",
-    "nonstop-package-resource": "~0.2.0",
+    "nonstop-pack": "~0.2.1",
+    "nonstop-package-resource": "~0.2.1",
     "nonstop-registry-resource": "~0.2.0",
     "postal": "^1.0.6",
     "request": "^2.61.0",

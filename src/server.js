@@ -23,7 +23,8 @@ function start() {
 			noSession: config.host.noSession,
 			resources: path.resolve( __dirname, "../resource" ),
 			authProvider: authProvider,
-			cors: config.host.cors
+			cors: config.host.cors,
+			logging: config.host.logging
 		};
 		if( config.host.urlPrefix ) {
 			hostConfig.urlPrefix = config.host.urlPrefix;

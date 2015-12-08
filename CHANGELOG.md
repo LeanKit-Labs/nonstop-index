@@ -1,5 +1,11 @@
 ## 0.2.*
 
+### 0.2.2
+ * Add missing actions to client role
+ * Update nonstop-package-resource to 0.2.1
+ * Default logging to output to console
+ * Provide configuration approach to control logging and document
+
 ### 0.2.1
 Removed default configuration for alternate storage
 

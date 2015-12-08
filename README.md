@@ -46,7 +46,15 @@ The process will look in the current working directory (where `nsindex` was call
 		noSession: true,
 		apiPrefix: "",
 		urlPrefix: "",
-		port: 4444
+		port: 4444,
+		logging: {
+			adapters: {
+				stdOut: {
+					level: 3,
+					topic: "#"
+				}
+			}
+		}
 	}
 }
 ```
@@ -69,6 +77,14 @@ The process will look in the current working directory (where `nsindex` was call
 		"apiPrefix": "",
 		"urlPrefix": "",
 		"port": 4444
+	},
+	"logging": {
+		"adapters": {
+			"stdOut": {
+				"level": 3,
+				"topic": "#"
+			}
+		}
 	},
 	"storage": {
 		"s3": {
